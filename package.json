@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "biome:fix": "biome format --write ./ && biome check --apply ./",
+    "formt:changed": "biome format --changed --write ./",
     "clean": "rm -rf ./node_modules && npm cache clean --force && npm install"
   },
   "dependencies": {
