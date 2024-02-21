@@ -9,7 +9,7 @@ nvm use
 2. 설치
 npm install
 
-3. prettier, eslint 에디터 설정
+3. biome 에디터 설정
 각자 에디터에 맞게 설정
 
 4. env 파일 추가
@@ -25,5 +25,11 @@ npm run dev
 
 2. 노드 모듈 삭제 후 재설치
 npm run clean
+
+3. 포멧팅
+npm run biome:fix
+
+4. main과 변경된 부분만 포멧팅
+npm run format:changed
 ```
 
