@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "biome:fix": "biome format --write ./ && biome check --apply ./",
+    "biome:fix": "biome format --write ./ && biome check --apply-unsafe ./",
     "formt:changed": "biome format --changed --write ./",
     "clean": "rm -rf ./node_modules && npm cache clean --force && npm install"
   },
