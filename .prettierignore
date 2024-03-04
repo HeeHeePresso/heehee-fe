@@ -1,0 +1,6 @@
+/**/*.*
+!.eslintrc.cjs
+!tsconfig.json
+!src/**/*
+!.prettierrc
+!next.config.mjs
