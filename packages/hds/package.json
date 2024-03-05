@@ -1,0 +1,33 @@
+{
+  "name": "@hehe/hds",
+  "version": "1.0.0",
+  "description": "design system of the hehe-fe project",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sb": "storybook dev -p 6006",
+    "build:sb": "storybook build"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "^14.1.2"
+  },
+  "dependencies": {
+    "next": "^14.1.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/nextjs": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "storybook": "^7.6.17"
+  }
+}
