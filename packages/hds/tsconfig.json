@@ -1,0 +1,8 @@
+{
+  "extends": ["../../tsconfig.json"],
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "typeRoots": ["../../@types"]
+  },
+  "include": ["src", "../../@types", ".storybook"]
+}
