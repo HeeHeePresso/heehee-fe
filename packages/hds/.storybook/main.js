@@ -24,5 +24,11 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
+  staticDirs: [
+    {
+      from: '../src/tokens/fonts',
+      to: 'src/tokens/fonts',
+    },
+  ],
 };
 export default config;

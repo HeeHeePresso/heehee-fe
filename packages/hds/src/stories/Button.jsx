@@ -13,6 +13,9 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       {...props}
     >
+      <div style={{ fontFamily: 'var(--font-hakgoansimMulgyeolB)', color: 'aliceblue' }}>
+        hakgoansimMulgyeolB
+      </div>
       {label}
       <style jsx>{`
         button {
