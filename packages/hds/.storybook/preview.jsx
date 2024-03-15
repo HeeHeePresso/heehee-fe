@@ -1,5 +1,5 @@
-import { hakgoansimMulgyeolB, pretendard, caniculeDisplayB } from '../src/tokens/fonts';
-import '../src/styles/reset.css';
+import { hakgoansimMulgyeolB, pretendard, caniculeDisplayB } from '@/systems/fonts';
+import '@/styles/reset.css';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {

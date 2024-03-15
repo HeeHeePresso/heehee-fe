@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import { caniculeDisplayB, hakgoansimMulgyeolB, pretendard } from '@hehe/hds/tokens/fonts';
+import { caniculeDisplayB, hakgoansimMulgyeolB, pretendard } from '@hehe/hds/systems/fonts';
 import type { Metadata } from 'next';
 import '@hehe/hds/styles/reset.css';
 
