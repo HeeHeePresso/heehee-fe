@@ -33,8 +33,7 @@
     /** prettier 에러 */
     "prettier/prettier": "error",
     "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
-    /** emotion/react 의 css 사용시 에러 무시 */
-    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    "react/no-unknown-property": ["error", { "ignore": ["jsx"] }],
     /** JSX 안에서 HTML 엔티티(escape sequence)를 사용하면 에러 */
     "react/no-unescaped-entities": [
       "error",
@@ -132,11 +131,6 @@
             "position": "before"
           },
           {
-            "pattern": "@emotion/*",
-            "group": "external",
-            "position": "before"
-          },
-          {
             "pattern": "@tanstack/*",
             "group": "external",
             "position": "before"
@@ -148,6 +142,11 @@
           },
           {
             "pattern": "lodash-es",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@vanilla-extract/*",
             "group": "external",
             "position": "before"
           },
