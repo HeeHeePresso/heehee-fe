@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import { caniculeDisplayB, hakgoansimMulgyeolB, pretendard } from '@hehe/hds/tokens/fonts';
-import './globals.css';
 import type { Metadata } from 'next';
+import '@hehe/hds/styles/reset.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

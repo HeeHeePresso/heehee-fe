@@ -5,6 +5,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <ul>
+          <li>dd</li>
+          <li>dd</li>
+          <li>dd</li>
+        </ul>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
