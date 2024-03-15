@@ -2,7 +2,11 @@
   "extends": ["../../tsconfig.json"],
   "compilerOptions": {
     "emitDeclarationOnly": true,
-    "typeRoots": ["../../@types"]
+    "typeRoots": ["../../@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src", "../../@types", ".storybook"]
 }
