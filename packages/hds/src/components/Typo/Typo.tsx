@@ -37,8 +37,11 @@ export interface TypoProps extends TypBaseProps {
   lines?: NonNullable<TypoVariants>['lines'];
 }
 
-/** 컴포넌트 설명입니다. */
-const Typo = forwardRef<HTMLElement, TypoProps>(
+/**
+ * Typo 컴포넌트
+ * - `subTitle` 의 경우 폰트 특성상 말줄임표가 표시되지 않습니다.
+ * */
+export const Typo = forwardRef<HTMLElement, TypoProps>(
   (
     {
       color = 'text_01',
