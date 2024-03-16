@@ -10,28 +10,28 @@ export const iconCss = recipe({
   },
   variants: {
     fill: {
-      'main-01': {},
-      'main-02': {},
-      'text-01': {},
-      'text-02': {},
+      main_01: {},
+      main_02: {},
+      text_01: {},
+      text_02: {},
       background: {},
-      'beige-01': {},
-      'beige-02': {},
+      beige_01: {},
+      beige_02: {},
     },
   },
   defaultVariants: {
-    fill: 'text-01',
+    fill: 'text_01',
   },
 });
 
-recipeGlobalStyle(iconCss({ fill: 'main-01' }), 'path', { fill: globalVars.color['main-01'] });
-recipeGlobalStyle(iconCss({ fill: 'main-02' }), 'path', { fill: globalVars.color['main-02'] });
-recipeGlobalStyle(iconCss({ fill: 'text-01' }), 'path', { fill: globalVars.color['text-01'] });
-recipeGlobalStyle(iconCss({ fill: 'text-02' }), 'path', { fill: globalVars.color['text-02'] });
+recipeGlobalStyle(iconCss({ fill: 'main_01' }), 'path', { fill: globalVars.color.main_01 });
+recipeGlobalStyle(iconCss({ fill: 'main_02' }), 'path', { fill: globalVars.color.main_02 });
+recipeGlobalStyle(iconCss({ fill: 'text_01' }), 'path', { fill: globalVars.color.text_01 });
+recipeGlobalStyle(iconCss({ fill: 'text_02' }), 'path', { fill: globalVars.color.text_02 });
 recipeGlobalStyle(iconCss({ fill: 'background' }), 'path', {
   fill: globalVars.color.background,
 });
-recipeGlobalStyle(iconCss({ fill: 'beige-01' }), 'path', { fill: globalVars.color['beige-01'] });
-recipeGlobalStyle(iconCss({ fill: 'beige-02' }), 'path', { fill: globalVars.color['beige-02'] });
+recipeGlobalStyle(iconCss({ fill: 'beige_01' }), 'path', { fill: globalVars.color.beige_01 });
+recipeGlobalStyle(iconCss({ fill: 'beige_02' }), 'path', { fill: globalVars.color.beige_02 });
 
 export type IconVariants = RecipeVariants<typeof iconCss>;

@@ -9,8 +9,8 @@ import { type GlobalStyleRule, globalStyle } from '@vanilla-extract/css';
  * const iconCss = recipe({
  *   variants: {
  *     color: {
- *       'main-01': {},
- *       'main-02': {},
+ *       'main_01': {},
+ *       'main_02': {},
  *     },
  *     name: {
  *       tom: {},
@@ -19,9 +19,9 @@ import { type GlobalStyleRule, globalStyle } from '@vanilla-extract/css';
  *   },
  * });
  *
- * recipeGlobalStyle(iconCss({ color: 'main-01', name: 'tom' }), 'path', { fill: 'tomato' });
+ * recipeGlobalStyle(iconCss({ color: 'main_01', name: 'tom' }), 'path', { fill: 'tomato' });
  * // 아래와 같이 변환
- * // .color_main-01, .name_tom path {fill: 'tomato'}
+ * // .color_main_01, .name_tom path {fill: 'tomato'}
  *
  * @param recipeSelector recipe 의 셀렉터
  * @param selector recipe과 함께 사용할 selector
