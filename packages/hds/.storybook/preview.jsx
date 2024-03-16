@@ -1,5 +1,6 @@
 import { hakgoansimMulgyeolB, pretendard, caniculeDisplayB } from '@/systems/fonts';
 import '@/styles/reset.css';
+import '@/styles/globalVars.css';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 /** @type { import('@storybook/react').Preview } */
