@@ -6,21 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "clean": "rm -rf ./node_modules && npm cache clean --force && npm install"
+    "clean": "rm -rf ./node_modules && npm cache clean --force && npm install",
+    "sb": "cd packages/hds && npm run sb"
   },
   "dependencies": {
-    "next": "14.1.0",
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/dynamic": "^2.1.0",
+    "@vanilla-extract/recipes": "^0.5.2",
+    "clsx": "^2.1.0",
+    "next": "^14.1.2",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
-    "@types/eslint": "^8.56.4",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
+    "@vanilla-extract/next-plugin": "^2.3.7",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -32,5 +38,15 @@
     "eslint-plugin-unused-imports": "^3.1.0",
     "prettier": "^3.2.5",
     "typescript": "^5"
-  }
+  },
+  "workspaces": [
+    "packages/hds"
+  ],
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ]
 }

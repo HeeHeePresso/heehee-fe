@@ -21,9 +21,15 @@ npm install
 
 ```bash
 1. 시작
+# 개발
 npm run dev
+# 프로덕션
+npm run start 
 
 2. 노드 모듈 삭제 후 재설치
 npm run clean
+
+3. 스토리북 시작
+npm run sb
 ```
 

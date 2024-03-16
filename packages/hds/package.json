@@ -1,0 +1,57 @@
+{
+  "name": "@hehe/hds",
+  "version": "1.0.0",
+  "description": "design system of the hehe-fe project",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sb": "storybook dev -p 6006",
+    "build:sb": "storybook build"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "next": "^14.1.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/dynamic": "^2.1.0",
+    "@vanilla-extract/recipes": "^0.5.2",
+    "clsx": "^2.1.0",
+    "next": "^14.1.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.2",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-styling-webpack": "^0.0.6",
+    "@storybook/addon-viewport": "^8.0.0",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/nextjs": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@svgr/webpack": "^8.1.0",
+    "@types/react": "^18.2.62",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@vanilla-extract/webpack-plugin": "^2.3.7",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "prettier": "^3.2.5",
+    "storybook": "^7.6.17",
+    "typescript": "^5.3.3"
+  }
+}
