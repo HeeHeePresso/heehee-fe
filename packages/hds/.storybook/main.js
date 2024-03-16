@@ -58,22 +58,33 @@ const config = {
     name: getAbsolutePath('@storybook/nextjs'),
     options: {},
   },
-  webpackFinal: async (baseConfig = {}) => {
-    const { default: nextConfig } = await import('../../../next.config.mjs');
+  webpackFinal: config => {
+    config.module.rules.unshift({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            titleProp: true,
+            ref: true,
+            svgo: false,
+            svgoConfig: {
+              plugins: [{ removeViewBox: false }],
+            },
+          },
+        },
+      ],
+    });
 
-    // merge whatever from nextConfig into the webpack config storybook will use
-    return {
-      ...baseConfig,
-      ...nextConfig.webpack,
-    };
+    return config;
   },
   docs: {
     autodocs: 'tag',
   },
   staticDirs: [
     {
-      from: '../src/tokens/fonts',
-      to: 'src/tokens/fonts',
+      from: '../src/systems/fonts',
+      to: 'src/systems/fonts',
     },
   ],
 };
