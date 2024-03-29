@@ -1,2 +1,1 @@
-const dd = 'dds';
-export default dd;
+export * from './components';
