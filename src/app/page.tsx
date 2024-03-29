@@ -1,10 +1,15 @@
 import Image from 'next/image';
+import { Icon, Typo } from '@hehe/hds/components';
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Icon icon="icon_chevron_up" size={16} fill="main_01" />
       <div className={styles.description}>
+        <Typo variant="text" size={24} color="main_01">
+          hello
+        </Typo>
         <ul>
           <li>dd</li>
           <li>dd</li>
