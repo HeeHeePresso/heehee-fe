@@ -24,6 +24,7 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         width={size}
         height={size}
         className={clsx(styles.iconCss({ fill }), className)}
+        style={{ width: size, height: size }}
         {...rest}
       />
     );
