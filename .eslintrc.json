@@ -27,7 +27,8 @@
     "ecmaFeatures": {
       "jsx": true,
       "js": true
-    }
+    },
+    "ecmaVersion": 2020
   },
   "rules": {
     /** prettier 에러 */
