@@ -15,13 +15,13 @@ export interface GaugeProps extends HTMLAttributes<HTMLDivElement>{
 /** 컴포넌트 설명을 여기에 작성합니다. doc 이 제대로 생성되지 않는다면 named export 해주세요 */
 const Gauge = forwardRef<HTMLDivElement, GaugeProps>( ({ bgColor, gauageColor, progress=0, ...rest }, ref) => {
   return (
-    <div className={styles.guageCss}>
+    <div className={styles.guageCss} ref={ref} >
       <div 
-    className={`${styles.guageCss} ${styles.guageBar}`} style={{ backgroundColor: bgColor}}
+    className={`${styles.guageBar}`} style={{ backgroundColor: bgColor}} 
     {...rest}
     />
   <div 
-    className={`${styles.guageCss} ${styles.guageBar}`} style={{ backgroundColor: gauageColor, width:`calc(350px * ${progress*0.01})` }}
+    className={`${styles.guageBar}`} style={{ backgroundColor: gauageColor, width:`calc(350px * ${progress*0.01})` }}
     {...rest}
     ></div>
   </div>
