@@ -4,3 +4,4 @@
 !src/**/*
 !.prettierrc
 !next.config.mjs
+!packages/hds/src/**/*
