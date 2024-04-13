@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 
 export const guageStepsCss = style({
-  width: '350px',
+  width: '100%',
 });
 
 export const guageStepsNames = style({

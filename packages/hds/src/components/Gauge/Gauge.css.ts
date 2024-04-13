@@ -1,11 +1,12 @@
 import { style } from '@vanilla-extract/css';
 
-export const guageCss = style({
-  width: '350px',
+export const guageBackground = style({
+  width: 'fit-content',
   height: '8px',
   borderRadius: '20px',
-  position: 'relative',
-  transition: 'all 0.25s ease-in-out',
 });
-
-export const guageBar = style([guageCss, { position: 'absolute', top: '0' }]);
+export const guageProgress = style({
+  height: 'inherit',
+  borderRadius: '20px',
+  transition: 'width 0.25s ease-in-out',
+});

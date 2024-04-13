@@ -1,14 +1,10 @@
-import { type Meta, type StoryFn, type StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 import globalVars from '@/styles/globalVars.css';
 import Gauge from './Gauge';
 
 const meta = {
   title: 'General/Gauge',
   component: Gauge,
-  parameters: {
-    layout: 'centered',
-    include: ['children'],
-  },
   tags: ['autodocs'],
   args: {
     bgColor: globalVars.color.beige_01,
@@ -25,8 +21,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-export const Default: StoryFn<typeof Gauge> = props => <Gauge {...props} />;
 
 export const Sample: Story = {
   args: {
