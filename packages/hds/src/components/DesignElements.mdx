@@ -1,0 +1,33 @@
+import { Meta, ColorPalette, ColorItem, Title, Subtitle, Story, Description } from '@storybook/blocks';
+import * as TypoStories from './Typo/Typo.stories';
+
+<Meta title="DesignElements" />
+<Title>디자인 요소</Title>
+
+<Subtitle>Colors</Subtitle>
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="대비되는 메인컬러 색상"
+    colors={{ main_01: '#EF5E08', main_02: '#264300' }}
+  />
+  <ColorItem
+    title="Sub color"
+    colors={{ text_01: '#222222', text_02: '#8B8B8B', beige_01: '#F9F2E7', beige_02: '#E5DED4' }}
+  />
+  <ColorItem
+    title="Background"
+    colors={{ background: '#FFFEFB' }}
+  />
+</ColorPalette>
+
+<Subtitle>Typography</Subtitle>
+<Story of={TypoStories.Header} />
+<Description of={TypoStories.Header} />
+
+<Story of={TypoStories.SubTitle} />
+<Description of={TypoStories.SubTitle} />
+
+<Story of={TypoStories.Normal} />
+<Description of={TypoStories.Normal} />
+
