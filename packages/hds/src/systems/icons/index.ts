@@ -19,3 +19,5 @@ export { ReactComponent as icon_plus } from './icon_plus.svg';
 export { ReactComponent as icon_store } from './icon_store.svg';
 export { ReactComponent as icon_chevron_down } from './icon_chevron_down.svg';
 export { ReactComponent as icon_chevron_up } from './icon_chevron_up.svg';
+export { ReactComponent as icon_calendar_blank } from './icon_calendar_blank.svg';
+export { ReactComponent as icon_spinner } from './icon_spinner.svg';
