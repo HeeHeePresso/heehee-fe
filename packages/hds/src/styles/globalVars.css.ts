@@ -13,7 +13,21 @@ const globalVars = createGlobalTheme(':root', {
   font: {
     pretendard: 'var(--font-pretendard)',
     hakgoansimMulgyeolB: 'var(--font-hakgoansimMulgyeolB)',
+    DMSerifDisplay: 'var(--font-DMSerifDisplay)',
     caniculeDisplayB: 'var(--font-caniculeDisplayB)',
+  },
+  spacing: {
+    /** 사이드 여백 */
+    x: '20px',
+  },
+  zIndex: {
+    swiper: {
+      pagination: '1',
+    },
+    floating: {
+      topNav: '10',
+      bottomNav: '1',
+    },
   },
 });
 
