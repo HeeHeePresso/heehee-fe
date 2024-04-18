@@ -33,7 +33,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={fontVars.join(' ')}>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div id={htmlIds.templateRoot} className={styles.templateCss}>
+          <section id={htmlIds.templateLeft} className={styles.templateLeftCss}>
+            <Splash />
+          </section>
+          <section id={htmlIds.templateRight} className={styles.templateRightCss}>
+            <MSWComponent>
+              <ReactQueryProvider>
+                <ToastContainer />
+                {children}
+              </ReactQueryProvider>
+            </MSWComponent>
+          </section>
+        </div>
+      </body>
     </html>
   );
 }
