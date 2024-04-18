@@ -1,110 +1,30 @@
-import Image from 'next/image';
-import { Icon, Typo } from '@hehe/hds/components';
-import styles from './page.module.css';
+'use client';
+import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
+import BottomNavUser from '@/components/BottomNav/BottomNavUser';
+import HomeTopNav from '@/containers/home/HomeTopNav';
+import FullScreenLoader from '@hehe/hds/components/FullScreenLoader';
+import ScrollView from '@hehe/hds/components/ScrollView';
+import * as styles from './page.css';
+
+const HomeContents = dynamic(() => import('@/containers/home/HomeContents'), { ssr: false });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Icon icon="icon_chevron_up" size={16} fill="main_01" />
-      <div className={styles.description}>
-        <Typo variant="text" size={24} color="main_01">
-          hello
-        </Typo>
-        <ul>
-          <li>dd</li>
-          <li>dd</li>
-          <li>dd</li>
-        </ul>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div style={{ border: '2px solid black', padding: 20 }}>
-          <div style={{ fontFamily: 'var(--font-pretendard)' }}>1. Pretendard</div>
-          <div style={{ fontFamily: 'var(--font-hakgoansimMulgyeolB)' }}>
-            2. hakgoansimMulgyeolB
-          </div>
-          <div style={{ fontFamily: 'var(--font-caniculeDisplayB)' }}>3. caniculeDisplayB</div>
-        </div>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              priority
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          priority
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
-        </a>
-      </div>
-    </main>
+    <>
+      <HomeTopNav />
+      <Suspense
+        fallback={
+          <ScrollView isFullPage>
+            <FullScreenLoader />
+          </ScrollView>
+        }
+      >
+        <ScrollView className={styles.pageCss}>
+          <HomeContents />
+        </ScrollView>
+      </Suspense>
+      <BottomNavUser />
+    </>
   );
 }
