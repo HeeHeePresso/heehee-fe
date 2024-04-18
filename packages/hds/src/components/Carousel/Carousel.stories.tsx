@@ -37,6 +37,4 @@ export const Horizontal: Story = ({ slides: _slides, renderSlide: _renderSlide, 
   );
 };
 
-// export const Loop: Story = {};
-
 export default meta;

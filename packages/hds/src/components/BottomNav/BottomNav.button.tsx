@@ -23,8 +23,6 @@ const BottomNavButton = React.forwardRef<HTMLAnchorElement, BottomNavButtonProps
     },
     ref
   ) => {
-    /** 스토리북 next/router 관련 addon next14 버전 호환성이 되지 않아 pathname 을 알 수 없기 때문에 방어코드 처리함 */
-
     return (
       <Link ref={ref} scale="md" className={styles.rootCss} {...rest}>
         <Icon icon={icon} size={36} fill={selected ? 'main_01' : 'text_01'} />
