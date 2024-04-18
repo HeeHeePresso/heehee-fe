@@ -100,9 +100,11 @@ const LOOP_OPTIONS: SwiperProps = {
     prev: {
       shadow: true,
       translate: ['-20%', 0, -1],
+      rotate: [0, 0, 0],
     },
     next: {
       translate: ['100%', 0, 0],
+      rotate: [0, 0, 0],
     },
   },
   loop: true,
