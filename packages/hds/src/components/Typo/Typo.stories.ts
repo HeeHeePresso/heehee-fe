@@ -66,4 +66,49 @@ export const Default: Story = {
   args: {},
 };
 
+export const Normal: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: '본문/ 상세 한글 및 영어 통일',
+      },
+    },
+  },
+  args: {
+    children: 'pretendard한글용',
+    variant: 'text_bold',
+    size: 24,
+  },
+};
+
+export const Header: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: '이벤트문구/ 메인 장식용 영어폰트',
+      },
+    },
+  },
+  args: {
+    children: 'DMSerifDisplay',
+    variant: 'header',
+    size: 24,
+  },
+};
+
+export const SubTitle: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: '이벤트문구/ 메인 장식용 한글폰트',
+      },
+    },
+  },
+  args: {
+    children: 'Hakgyoan한글용',
+    variant: 'subtitle',
+    size: 24,
+  },
+};
+
 export default meta;

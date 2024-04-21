@@ -1,7 +1,7 @@
 import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('*', {
-  fontFamily: 'var(--font-pretenard)',
+  fontFamily: 'var(--font-pretendard)',
   color: 'black',
   fontSize: 'inherit',
   fontSynthesis: 'none',
@@ -27,8 +27,13 @@ globalStyle('ol,ul', {
   listStyle: 'none',
 });
 
-globalStyle('html,body,#root', {
-  background: 'white',
+globalStyle('html,body,#template-root', {
+  background: '#FFFEFB',
+  width: '100%',
+  height: '100%',
+});
+
+globalStyle('#template-left,#template-right', {
   width: '100%',
   height: '100%',
 });
