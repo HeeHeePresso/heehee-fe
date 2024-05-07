@@ -1,10 +1,11 @@
 import { style } from '@vanilla-extract/css';
+import globalVars from '@/styles/globalVars.css';
 
 export const imageStyle = style({
   width: '100%',
   height: 'auto',
   objectFit: 'cover',
-  backgroundColor: 'gray',
+  backgroundColor: globalVars.color.background,
 });
 
 export const ratios = {
