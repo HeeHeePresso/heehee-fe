@@ -10,9 +10,14 @@ const meta = {
       control: 'select',
       options: ['1/1', '16/9', '3/4'],
     },
+    src: {
+      control: 'text',
+    },
   },
   args: {
     src: 'https://picsum.photos/200/400',
+    width: 0,
+    height: 0,
   },
 } satisfies Meta<typeof Img>;
 
