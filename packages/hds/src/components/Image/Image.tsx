@@ -24,6 +24,7 @@ const Image = forwardRef<HTMLImageElement, ImageProps>(
     if (!ratio) {
       return (
         <NImage
+          ref={ref}
           src={imageSrc}
           className={clsx(styles.imageStyle, className)}
           width={width}
