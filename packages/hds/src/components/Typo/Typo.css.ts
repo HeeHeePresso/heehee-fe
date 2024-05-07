@@ -64,7 +64,7 @@ export const typoCss = recipe({
       subtitle: {
         fontWeight: 700,
         lineHeight: '136%',
-        fontFamily: globalVars.font.caniculeDisplayB,
+        fontFamily: globalVars.font.DMSerifDisplay,
       },
       text: {
         fontWeight: 700,

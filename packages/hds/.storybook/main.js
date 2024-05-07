@@ -87,6 +87,10 @@ const config = {
       from: '../src/systems/fonts',
       to: 'src/systems/fonts',
     },
+    {
+      from: '../src/systems/images',
+      to: 'src/systems/images',
+    },
   ],
 };
 export default config;

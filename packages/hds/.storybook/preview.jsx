@@ -1,8 +1,11 @@
-import { hakgoansimMulgyeolB, pretendard, caniculeDisplayB } from '@/systems/fonts';
+import { hakgoansimMulgyeolB, pretendard, DMSerifDisplay, caniculeDisplayB } from '@/systems/fonts';
 import '@/styles/reset.css';
 import '@/styles/resetStorybook.css';
 import '@/styles/globalVars.css';
+import { register } from 'swiper/element/bundle';
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+
+register();
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -25,6 +28,7 @@ const preview = {
         // next/font 오류로 인해 스토리북 환경에서는 pretendard var 대신 FontFamily 로 사용
         window.document.documentElement.classList.add(
           hakgoansimMulgyeolB.variable,
+          DMSerifDisplay.variable,
           caniculeDisplayB.variable
         );
       }

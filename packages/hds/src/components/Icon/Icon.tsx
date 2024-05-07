@@ -15,7 +15,7 @@ export interface IconProps extends ComponentPropsWithoutRef<'svg'> {
 
 /** icon 을 name 으로 사용할 수 있게 하는 아이콘 컨테이너 컴포넌트 */
 const Icon = forwardRef<SVGSVGElement, IconProps>(
-  ({ icon, size = 20, fill = 'text_01', className = '', ...rest }, ref) => {
+  ({ icon, size = 20, fill = 'text_01', className = '', style, ...rest }, ref) => {
     const IconComponent = icons[icon];
 
     return (
@@ -24,7 +24,7 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         width={size}
         height={size}
         className={clsx(styles.iconCss({ fill }), className)}
-        style={{ width: size, height: size }}
+        style={{ width: size, height: size, ...style }}
         {...rest}
       />
     );

@@ -3,9 +3,26 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   transpilePackages: ['@hehe/hds'],
+  experimental: { instrumentationHook: true },
+  webpack(config, { isServer }) {
+    if (isServer) {
+      if (Array.isArray(config.resolve.alias)) {
+        config.resolve.alias.push({ name: 'msw/browser', alias: false });
+      } else {
+        config.resolve.alias['msw/browser'] = false;
+      }
+    } else {
+      if (Array.isArray(config.resolve.alias)) {
+        config.resolve.alias.push({ name: 'msw/node', alias: false });
+      } else {
+        config.resolve.alias['msw/node'] = false;
+      }
+    }
 
-  webpack(config) {
     config.module.rules.unshift({
       test: /\.svg$/,
       use: [
@@ -26,6 +43,10 @@ const nextConfig = {
 
     return config;
   },
+  async rewrites() {
+    return [{ source: '/:path*', destination: 'http://localhost:8761/:path*' }];
+  },
+  // trailingSlash: true,
 };
 
 export default withVanillaExtract(nextConfig);
