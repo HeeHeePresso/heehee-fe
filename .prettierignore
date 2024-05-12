@@ -1,7 +1,0 @@
-/**/*.*
-!.eslintrc.json
-!tsconfig.json
-!src/**/*
-!.prettierrc
-!next.config.mjs
-!packages/hds/src/**/*
