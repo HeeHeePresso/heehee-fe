@@ -18,7 +18,7 @@ const ItemVerticalCard = React.forwardRef<HTMLAnchorElement, ItemVerticalCardPro
   ({ src, title, subTitle, className, ...rest }, ref) => {
     return (
       <Link ref={ref} className={clsx(styles.rootCss, className)} scale="sm" {...rest}>
-        <ItemThumbnail src={src} alt={title} />
+        <ItemThumbnail src={src} alt={title || ''} />
         {title && subTitle && (
           <div className={styles.infoCss}>
             <Typo
