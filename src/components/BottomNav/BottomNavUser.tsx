@@ -29,7 +29,7 @@ const BottomNavUser = () => {
 const BUTTONS: React.ComponentPropsWithoutRef<typeof BottomNav.Btn>[] = [
   { href: '/', icon: 'icon_home', label: '홈' },
   { href: '/orders', icon: 'icon_member', label: '주문내역' },
-  { href: '/order', icon: 'icon_coffee', label: '주문하기' },
+  { href: '/menu', icon: 'icon_coffee', label: '주문하기' },
   { href: '/setting', icon: 'icon_more', label: '더보기' },
 ];
 
