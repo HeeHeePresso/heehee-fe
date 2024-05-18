@@ -8,8 +8,11 @@ export const CartIcon = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  position: 'sticky',
-  bottom: 0,
+
+  position: 'absolute',
+  right: '20px',
+  bottom: '127px',
+
   zIndex: 10,
   backgroundColor: globalVars.color.main_02,
   borderRadius: '100%',

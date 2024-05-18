@@ -11,6 +11,7 @@ export const Container = style({
   width: '100%',
   background: globalVars.color.beige_01,
   padding: `13px ${globalVars.spacing.x}`,
+  marginBottom: '30px',
 });
 
 export const IconCss = style({

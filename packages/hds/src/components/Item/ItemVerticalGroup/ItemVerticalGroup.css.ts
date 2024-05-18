@@ -5,4 +5,5 @@ export const rootCss = style({
   flexDirection: 'column',
   paddingLeft: '20px',
   gap: '16px',
+  marginBottom: '40px',
 });
